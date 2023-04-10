@@ -1,0 +1,42 @@
+main: com.kryeit.CreativeStuff
+version: 1.1
+author: MuriPlz
+api-version: 1.18
+depend: [AFKPlus,GriefDefender]
+name: Stuff
+commands:
+  online:
+    description: online players
+    permission: stuff.online
+  discord:
+    description: sends discord link
+  forum:
+    description: sends forum link
+  rules:
+    description: sends rules link
+  sendcoords:
+    description: sends your cords to the player
+    aliases:
+      - sharecoords
+  map:
+    description: shows dynmap url
+  patreon:
+    description: sends patreon link
+    aliases:
+      - donate
+  timeplayed:
+    description: shows time played
+  lastonline:
+    description: shows last time online
+  fly:
+    description: makes you fly
+    permission: stuff.fly
+  mute:
+    description: mutes players
+    permission: stuff.mute
+  invsee:
+    description: gets a player inventory
+    permission: stuff.invsee
+  enderinvsee:
+    description: gets a player enderchest
+    permission: stuff.enderinvsee

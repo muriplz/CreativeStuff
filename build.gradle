@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'com.kryeit'
+version '1.2'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Spigot'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots'
+    }
+    maven {
+        name = 'GriefDefender'
+        url = 'https://repo.glaremasters.me/repository/bloodshot'
+    }
+    maven{
+        url = 'https://maven.enginehub.org/repo/'
+    }
+}
+
+dependencies {
+    compileOnly "com.griefdefender:api:2.1.0-20220122.032038-5"
+    compileOnly "org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    compileOnly "net.lapismc:AFKPlus:3.3.13"
+}
+
+test {
+    useJUnitPlatform()
+}
