@@ -12,6 +12,8 @@ import org.bukkit.event.entity.EntityDropItemEvent;
 import org.bukkit.event.player.PlayerEggThrowEvent;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Objects;
+
 public class onChickenEgg implements Listener {
 
     @EventHandler
@@ -36,19 +38,13 @@ public class onChickenEgg implements Listener {
 
     @EventHandler
     public void onChickenDeath(EntityDeathEvent event) {
-        if (event.getEntity() instanceof Chicken) {
+        if (event.getEntity() instanceof Chicken && !Objects.requireNonNull(GriefDefender.getCore().getClaimAt(event.getEntity().getLocation())).isWilderness() ) {
             int numEggs = 0;
             double rand = Math.random();
-            if (rand < 0.2) {
-                numEggs = 0;
-            } else if (rand < 0.8) {
+            if (rand < 0.90) {
                 numEggs = 1;
-            } else if (rand < 0.95) {
-                numEggs = 2;
-            } else if (rand < 0.99) {
-                numEggs = 3;
             } else {
-                numEggs = 4;
+                numEggs = 3;
             }
             ItemStack eggStack = new ItemStack(org.bukkit.Material.EGG, numEggs);
             event.getDrops().add(eggStack);

@@ -35,3 +35,11 @@ commands:
   enderinvsee:
     description: gets a player enderchest
     permission: stuff.enderinvsee
+  kill:
+    description: kills a player
+  survival:
+    description: sends you to survival
+  creative:
+    description: sends you to creative
+  sch:
+    description: gives you the schematic tools
