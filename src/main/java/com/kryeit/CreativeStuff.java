@@ -21,8 +21,6 @@ public class CreativeStuff extends JavaPlugin {
     public static AFKPlusPlayerAPI afkPlusPlayerAPI = new AFKPlusPlayerAPI();
     public final List<UUID> sentTrapped = new ArrayList<>();
     public static CreativeStuff instance;
-    public final List<UUID> warned = new ArrayList<>();
-    public final List<UUID> flyEnabled = new ArrayList<>();
     public final List<String> offlinePlayers = new ArrayList<>();
 
     public void onEnable () {
