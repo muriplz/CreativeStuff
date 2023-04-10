@@ -3,6 +3,7 @@ package com.kryeit;
 import com.kryeit.Listener.*;
 import com.kryeit.commands.*;
 import com.kryeit.tab.BasicPlayerTab;
+import com.kryeit.tab.GamemodeTab;
 import com.kryeit.tab.PlayerTab;
 import com.kryeit.tab.ReturnEmptyTab;
 import net.lapismc.afkplus.api.AFKPlusPlayerAPI;
@@ -40,16 +41,15 @@ public class CreativeStuff extends JavaPlugin {
         registerBasicCommand("discord", new Discord());
         registerBasicCommand("forum", new Forum());
         registerBasicCommand("rules", new Rules());
-        registerBasicCommand("map", new Map());
         registerBasicCommand("patreon", new Patreon());
-        registerBasicCommand("fly", new Fly());
+        registerBasicCommand("kill", new Kill());
 
         registerCommand("invsee", new InvSee(), new BasicPlayerTab());
         registerCommand("enderinvsee", new EnderInvSee(), new BasicPlayerTab());
         registerCommand("sendcoords", new SendCoords(), new BasicPlayerTab());
         registerCommand("timeplayed", new TimePlayed(), new BasicPlayerTab());
-
         registerCommand("lastonline", new LastOnline(), new PlayerTab());
+        registerCommand("gamemode", new Gamemode(), new GamemodeTab());
 
     }
 

@@ -18,8 +18,6 @@ commands:
     description: sends your cords to the player
     aliases:
       - sharecoords
-  map:
-    description: shows dynmap url
   patreon:
     description: sends patreon link
     aliases:
@@ -28,9 +26,6 @@ commands:
     description: shows time played
   lastonline:
     description: shows last time online
-  fly:
-    description: makes you fly
-    permission: stuff.fly
   mute:
     description: mutes players
     permission: stuff.mute

@@ -18,7 +18,7 @@ public class onJoin implements Listener {
 
         for (Player player : Bukkit.getOnlinePlayers()) {
             if (player.getName().equals(p.getName())) {
-                p.sendMessage(Utils.color("&bWelcome to Kryeit! see /rules"));
+                p.sendMessage(Utils.color("&bWelcome to Kryeit! see /rules\nAdditional rules:\n- Don't schematic illegal blocks or items."));
                 continue;
             }
             player.sendMessage(Utils.color("&b" + p.getName()
