@@ -35,15 +35,27 @@ commands:
   enderinvsee:
     description: gets a player enderchest
     permission: stuff.enderinvsee
-  kill:
+  killme:
     description: kills a player
+    permission: stuff.killme
   survival:
     description: sends you to survival
+    permission: stuff.survival
   creative:
     description: sends you to creative
+    permission: stuff.creative
   sch:
     description: gives you the schematic tools
+    permission: stuff.sch
   fly:
     description: makes you fly
+    permission: stuff.fly
   claimkit:
     description: gives you the claim kit
+    permission: stuff.claimkit
+  haste:
+    description: gives you haste
+    permission: stuff.haste
+  unhaste:
+    description: removes haste
+    permission: stuff.unhaste

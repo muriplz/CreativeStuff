@@ -40,12 +40,14 @@ public class CreativeStuff extends JavaPlugin {
         registerBasicCommand("forum", new Forum());
         registerBasicCommand("rules", new Rules());
         registerBasicCommand("patreon", new Patreon());
-        registerBasicCommand("kill", new Kill());
+        registerBasicCommand("killme", new KillMe());
         registerBasicCommand("survival", new Survival());
         registerBasicCommand("creative", new Creative());
         registerBasicCommand("sch", new Sch());
         registerBasicCommand("fly", new Fly());
         registerBasicCommand("claimkit", new ClaimKit());
+        registerBasicCommand("haste", new Haste());
+        registerBasicCommand("unhaste", new Unhaste());
 
         registerCommand("invsee", new InvSee(), new BasicPlayerTab());
         registerCommand("enderinvsee", new EnderInvSee(), new BasicPlayerTab());

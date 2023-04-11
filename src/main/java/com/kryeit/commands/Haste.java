@@ -5,6 +5,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 public class Haste implements CommandExecutor {
     @Override
@@ -19,7 +21,7 @@ public class Haste implements CommandExecutor {
             return false;
         }
 
-        Bukkit.dispatchCommand(player,"effect give " + player.getName() + " 99999 2");
+        player.addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 9999 * 20, 3));
 
         return false;
     }

@@ -18,11 +18,11 @@ public class onJoin implements Listener {
 
         for (Player player : Bukkit.getOnlinePlayers()) {
             if (player.getName().equals(p.getName())) {
-                p.sendMessage(Utils.color("&bWelcome to Kryeit! see /rules\nAdditional rules:\n- Don't schematic illegal/creative-only blocks or items."));
+                p.sendMessage(Utils.color("&bWelcome to Kryeitive! see /rules\nAdditional rules:\n- Don't schematic illegal/creative-only blocks or items."));
                 continue;
             }
             player.sendMessage(Utils.color("&b" + p.getName()
-                    + " has joined Kryeit for the first time! Welcome!"));
+                    + " has joined Kryeitive for the first time! Welcome!"));
         }
     }
 }

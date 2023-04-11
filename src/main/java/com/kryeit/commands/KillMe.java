@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Kill implements CommandExecutor {
+public class KillMe implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player player)) {
@@ -14,7 +14,7 @@ public class Kill implements CommandExecutor {
             return false;
         }
         if (args.length != 0) {
-            sender.sendMessage("Usage: /kill");
+            sender.sendMessage("Usage: /killme");
             return false;
         }
 

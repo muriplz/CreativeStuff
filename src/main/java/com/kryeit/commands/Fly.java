@@ -24,9 +24,11 @@ public class Fly implements CommandExecutor {
         if(flyEnabled.contains(player.getUniqueId())) {
             player.setAllowFlight(false);
             flyEnabled.remove(player.getUniqueId());
+            player.sendMessage("Fly disabled");
         }else{
             player.setAllowFlight(true);
             flyEnabled.add(player.getUniqueId());
+            player.sendMessage("Fly enabled");
         }
 
         return false;
