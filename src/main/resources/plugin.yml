@@ -43,3 +43,7 @@ commands:
     description: sends you to creative
   sch:
     description: gives you the schematic tools
+  fly:
+    description: makes you fly
+  claimkit:
+    description: gives you the claim kit

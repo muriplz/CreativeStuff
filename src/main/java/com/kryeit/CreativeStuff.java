@@ -22,6 +22,7 @@ public class CreativeStuff extends JavaPlugin {
     public final List<UUID> sentTrapped = new ArrayList<>();
     public static CreativeStuff instance;
     public final List<String> offlinePlayers = new ArrayList<>();
+    public final List<UUID> flyEnabled = new ArrayList<>();
 
     public void onEnable () {
 
@@ -43,6 +44,8 @@ public class CreativeStuff extends JavaPlugin {
         registerBasicCommand("survival", new Survival());
         registerBasicCommand("creative", new Creative());
         registerBasicCommand("sch", new Sch());
+        registerBasicCommand("fly", new Fly());
+        registerBasicCommand("claimkit", new ClaimKit());
 
         registerCommand("invsee", new InvSee(), new BasicPlayerTab());
         registerCommand("enderinvsee", new EnderInvSee(), new BasicPlayerTab());

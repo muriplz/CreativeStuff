@@ -3,6 +3,8 @@ package com.kryeit.Listener;
 import com.griefdefender.api.GriefDefender;
 import com.griefdefender.api.User;
 import com.griefdefender.api.claim.Claim;
+import com.griefdefender.api.claim.TrustType;
+import com.griefdefender.api.claim.TrustTypes;
 import org.bukkit.Material;
 import org.bukkit.entity.Chicken;
 import org.bukkit.event.EventHandler;
@@ -26,9 +28,9 @@ public class onChickenEgg implements Listener {
     @EventHandler
     public void onEggThrow(PlayerEggThrowEvent event) {
         Claim claim = GriefDefender.getCore().getClaimAt(event.getEgg().getLocation());
-
+// && claim.isUserTrusted(event.getPlayer().getUniqueId(), TrustTypes.BUILDER)
         assert claim != null;
-        if(!claim.isWilderness()) {
+        if(!claim.isWilderness() ) {
             event.setHatching(false); // Cancel the random hatching
             event.setNumHatches((byte) 1); // Set the number of chickens to spawn to 1
             Chicken chicken = event.getPlayer().getWorld().spawn(event.getEgg().getLocation(), Chicken.class);
