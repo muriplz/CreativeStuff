@@ -44,6 +44,9 @@ commands:
   creative:
     description: sends you to creative
     permission: stuff.creative
+  spectator:
+    description: sends you to spectator
+    permission: stuff.spectator
   sch:
     description: gives you the schematic tools
     permission: stuff.sch

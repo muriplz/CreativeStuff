@@ -9,6 +9,8 @@ import net.lapismc.afkplus.api.AFKPlusPlayerAPI;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.event.Listener;
+import org.bukkit.permissions.Permission;
+import org.bukkit.permissions.PermissionDefault;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -34,6 +36,7 @@ public class CreativeStuff extends JavaPlugin {
         registerEvent(new onWeatherChange());
         registerEvent(new onEndermanTake());
         registerEvent(new onChickenEgg());
+        registerEvent(new onInventoryClick());
 
         registerBasicCommand("online", new Online());
         registerBasicCommand("discord", new Discord());
@@ -43,6 +46,7 @@ public class CreativeStuff extends JavaPlugin {
         registerBasicCommand("killme", new KillMe());
         registerBasicCommand("survival", new Survival());
         registerBasicCommand("creative", new Creative());
+        registerBasicCommand("spectator", new Spectator());
         registerBasicCommand("sch", new Sch());
         registerBasicCommand("fly", new Fly());
         registerBasicCommand("claimkit", new ClaimKit());

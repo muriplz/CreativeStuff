@@ -19,7 +19,13 @@ public class Survival implements CommandExecutor {
             return false;
         }
 
-        player.setGameMode(GameMode.SURVIVAL);
+
+
+        if(player.getGameMode().toString().equals("SURVIVAL")) {
+            player.setGameMode(GameMode.CREATIVE);
+        }else{
+            player.setGameMode(GameMode.SURVIVAL);
+        }
         player.sendMessage("Gamemode set to survival");
         return true;
     }
