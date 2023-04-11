@@ -38,13 +38,15 @@ public class onChickenEgg implements Listener {
 
     @EventHandler
     public void onChickenDeath(EntityDeathEvent event) {
-        if (event.getEntity() instanceof Chicken && !Objects.requireNonNull(GriefDefender.getCore().getClaimAt(event.getEntity().getLocation())).isWilderness() ) {
+        Claim claim = GriefDefender.getCore().getClaimAt(event.getEntity().getLocation());
+        if(claim == null) return;
+        if (event.getEntity() instanceof Chicken && !claim.isWilderness()) {
             int numEggs = 0;
             double rand = Math.random();
             if (rand < 0.90) {
                 numEggs = 1;
             } else {
-                numEggs = 3;
+                numEggs = 2;
             }
             ItemStack eggStack = new ItemStack(org.bukkit.Material.EGG, numEggs);
             event.getDrops().add(eggStack);
